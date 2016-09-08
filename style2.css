@@ -1,0 +1,179 @@
+body{
+	 background-color:grey;
+}
+	
+h1 {
+	width:350px;
+	height:10px;
+    color: black;
+	margin-top: 30;
+    margin-left: 480px;
+	font-size: 40px ;
+	font-family: "Times New Roman", Times, serif;
+	
+}
+	
+div {
+	
+	
+	margin-top: 100px ;
+	margin-left: 330px;
+}
+
+	
+ul {
+	margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li a {
+text-decoration:none ;
+color: white ;
+display: block ;
+	
+}
+
+
+ul li 
+{
+	float : left ;
+	width: 150px;
+	height: 40px;
+	background-color: black;
+	font-size: 20px ;
+	line-height: 40px;
+	text-align: center;
+	opacity: .8;
+	border: 3px solid #285189 ;
+}
+
+ul li a:hover{
+	background-color:orange ;
+}
+ul li ul li{
+	display: none;
+}
+
+ul li:hover ul li {
+	display: block;
+}
+
+#myDiv{
+	width: 540px;
+    height: 390px;
+   
+	margin-left: 320px;
+	margin-top: 60px;
+    -webkit-animation: mymove 15s infinite; 
+    animation: mymove 15s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    0% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/160801-SP-Shoes-Hero2-Runningshoes-6523-540x370._V283650716_.jpg")}
+	25% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/peta-macbeth-shoe-1-537x402.jpg")}
+	50% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/simple-shoes-1-537x402.jpg")}
+	75% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/Shoes-Beautiful-Shoes-Buy-Hot-Heels-Your-Shoe-Obsessed-Pals-Christmas.gif")}
+	100% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/AthelticPropulsionLabsAPLConcept3_1.jpg")}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    0% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/160801-SP-Shoes-Hero2-Runningshoes-6523-540x370._V283650716_.jpg")}
+	25% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/peta-macbeth-shoe-1-537x402.jpg")}
+	50% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/simple-shoes-1-537x402.jpg")}
+	75% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/Shoes-Beautiful-Shoes-Buy-Hot-Heels-Your-Shoe-Obsessed-Pals-Christmas.gif")}
+	100% {background-image: url("http://userpages.umbc.edu/~yt21579/EX7/AthelticPropulsionLabsAPLConcept3_1.jpg")}
+ }
+ 
+ 
+#img1 {
+    position: absolute;
+    margin-left:140px ;
+	margin-top:40px ;
+    width: 200px;
+   height: 90px
+}
+
+#img2 {
+    position: absolute;
+	margin-left:540px ;
+	margin-top:40px ;
+    width: 200px;
+   height: 90px
+}
+#img3 {
+    position: absolute;
+    margin-left:930px ;
+	margin-top:40px ;
+    width: 200px;
+   height: 90px ;
+}
+#img4 {
+    position: absolute;
+    margin-left:140px ;
+	margin-top:240px ;
+    width: 200px;
+   height: 90px
+}
+#img5 {
+    position: absolute;
+	margin-left:540px ;
+	margin-top:240px ;
+    width: 200px;
+   height: 90px
+}
+
+#img6 {
+    position: absolute;
+    margin-left:930px ;
+	margin-top:240px ;
+    width: 200px;
+   height: 90px ;
+}
+#img7 {
+    position: absolute;
+	top: 10px ;
+   width: 340px;
+   height: 120px
+}
+#img8 {
+    position: absolute;
+    margin-left: 1000px ;
+	margin-right: 20px ;
+	top: 10px ;
+    width: 340px;
+   height: 120px
+}
+footer {
+  
+  margin-top: 460px;
+  height: 70px;
+  background-color: grey;
+  font-size: 20px;
+  color: black ;
+  width: 33%;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add padding to containers */
+.container {
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+    padding: 0px;
+}
+
+

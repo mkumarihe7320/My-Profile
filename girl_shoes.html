@@ -1,0 +1,138 @@
+<html>
+</head>
+<script>
+function FindIfIdExists (obj, id) {
+var TheNodeList= obj.getElementsByTagName('div');
+for (NodeNumber = 0; NodeNumber<TheNodeList.length; NodeNumber++){
+if (TheNodeList[NodeNumber].id === id){
+return NodeNumber+1;
+}
+}
+return 0;
+}
+function AddToCart (itemToAdd) {
+var  TheCartItemImages = document.getElementById('cartItemImages');
+var FoundNodeCount = FindIfIdExists(TheCartItemImages,  "CartItem" +itemToAdd) ;
+if( FoundNodeCount === 0){
+var TheCartItemToAdd =document.getElementById(itemToAdd).cloneNode(true);
+TheCartItemToAdd.id ="cartItem" +itemToAdd ;
+TheCartItemImages.appendChild(TheCartItemToAdd);
+TheCartItemToAdd.childNodes[1].height= 40 ;
+TheCartItemToAdd.childNodes[1].width= 40;
+}
+document.getElementById('products').style.visibility= 'hidden';
+document.getElementById('TheCart').style.visibility= 'visible';
+
+}
+function ContinueShopping () {
+document.getElementById('products').style.visibility= 'visible';
+document.getElementById('TheCart').style.visibility= 'hidden';
+}
+</script>
+<link rel="stylesheet" href="style2.css"  type="text/css">
+<title > Latest Fashion </title>
+</head>
+</body>
+<h1> Shutter Stock</h1>
+
+
+<div>
+<ul>
+<li><a href="#">Women</a>
+<ul>
+     <li><a href="#">Cloths</a></li>
+    <li><a href="#">Bags</a></li>
+    <li><a href="#">Shoes</a></li>
+    <li><a href="#">Accesories</a></li>
+</ul>
+<li><a href="#">Men</a>
+<ul>
+<li><a href="#">Cloths</a></li>
+    <li><a href="#">Bags</a></li>
+    <li><a href="#">Shoes</a></li>
+    <li><a href="#">Accesories</a></li>
+	</ul>
+<li><a href="#">Kids</a>
+
+<ul>
+<li><a href="#">Cloths</a></li>
+    <li><a href="#">Bags</a></li>
+    <li><a href="#">Shoes</a></li>
+    <li><a href="#">Accesories</a></li>
+	</ul>
+<li><a href="#">Sale</a>
+<ul>
+<li><a href="#">Cloths</a></li>
+    <li><a href="#">Bags</a></li>
+    <li><a href="#">Shoes</a></li>
+    <li><a href="#">Accesories</a></li>
+	</ul>
+</ul>
+</div>
+</br</br></br></br></br></br>
+<div id="myDIV">
+</div>
+<div id="products"  style='visibility: visible' >
+<div id="001" data-price="50.00" style =" margin-left: -120px;  margin-top: 100px; color: black;" >
+<img src="http://userpages.umbc.edu/~yt21579/EX7/301954899_001_1.jpg" height="200" width="200">
+</div>
+<div style ="position:absolute; margin-left: -120px;  margin-top: 10px" >
+<img src="images/add-to-cart-dark.png" height="80"  onclick='AddToCart("001")'>
+</div>
+<div style ="position:absolute; margin-left: 0px;  margin-top: 30px; font-size: 30px ;" >
+$50.00
+</div>
+
+<div id="002" data-price="30.00" style =" margin-left: 220px;  margin-top: -200px; color: black;" >
+<img src="http://userpages.umbc.edu/~yt21579/EX7/302183292_001_1.jpg" height="200" width="200">
+</div>
+<div style ="position:absolute; margin-left: 220px;  margin-top: 10px" >
+<img src="images/add-to-cart-dark.png" height="80"  onclick='AddToCart("002")'>
+</div>
+<div style ="position:absolute; margin-left: 340px;  margin-top: 30px; font-size: 30px ;" >
+$30.00
+</div>
+
+
+<div id="003" data-price="45.00" style =" margin-left: 520px;  margin-top: -200px; color: black;" >
+<img src="http://userpages.umbc.edu/~yt21579/EX7/302184091_233.jpg" height="200" width="200">
+</div>
+<div style ="position:absolute; margin-left: 520px;  margin-top: 10px" >
+<img src="images/add-to-cart-dark.png" height="80"  onclick='AddToCart("003")'>
+</div>
+<div style ="position:absolute; margin-left: 640px;  margin-top: 30px; font-size: 30px ;" >
+$45.00
+</div>
+
+
+</div>
+<div id='TheCart' style='visibility: hidden'>
+<div style="position:absolute; align:right;  font-size: 30px ; left: 700px ; border:4px  solid;display: block ;background-color:#FFD700; color:white; top:40px" >
+The Cart 
+</div>
+<div style= "position:absolute;  left:700px;  top:300px ">
+<img src="images/images.png" height="50"  onclick='ContinueShopping()'>
+</div>
+<div id="cartItemImages" style="position:absolute; left:1005px;  margin-top:-1020px; "></div>
+<div id="cartItemRemove" style="position:absolute; left:200px;  top:150px; "></div>
+<div id="cartItemPrice" style="position:absolute; left:250px;  top:150px; "></div>
+<div id="cartItemQuantity" style="position:absolute; left:300px;  top:150px; "></div>
+<div id="cartItemTotal" style="position:absolute; left:350px;  top:150px; "></div>
+<div id="cartItemTotal" style="position:absolute; left:700px; color:white; top:225px; border:4px  solid;display: block; background-color:#FFD700; font-size: 22px ">Order Total</div>
+</div>
+<div id="ThankYouForOrder" style='visibility: hidden; font-size:60px' >
+Thank you for your order
+</div>`
+
+</br>
+</br>
+</br>
+</br>
+
+
+<footer>
+  <p>Posted by: Manisha Kumari  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact information: manisha.fbw@gmail.com ,2018502809</a>.</p>
+</footer>
+
+</body>
+</html>
