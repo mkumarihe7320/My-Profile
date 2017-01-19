@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+body
+ {
+ background-color: grey;
+ }
+ h3{
+ margin-left: 300px ;
+ margin-top: 100px ;
+ margin-bottom: -40px ;
+ }
+ p
+ {
+ margin-left: 0px ;
+ margin-top: 80px ;
+ }
+span  {
+font-size: 15px;
+color: red;
+}
+ 
+</style>
+</head>
+<body>
+<form ng-app="myApp" ng-controller="myCtrl" name="myForm" novalidate>
+<h3>First_Name:<h3>
+<p><input type="text" name="first_name" ng-model="first_name" required>
+<span ng-show="!first_name.length"> * Mandatory Field!</span>
+</span>
+</p>
+<p id="demo"></p>
+<br>
+<br>
+<button type="button" class="btn btn-danger btn-lg"
+ng-click="submit()">Submit </button>
+
+</form>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $window ) {
+   $scope.submit = function(){
+    var uname = $scope.first_name ;
+	console.log(uname);
+	
+	  
+	  var x = "https://npiregistry.cms.hhs.gov/api?" + "first_name=" + uname ;
+	  $window.open(x);
+	
+}; 
+	 
+  
+});
+</script>
+</body>
+</html>
